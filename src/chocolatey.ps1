@@ -9,6 +9,7 @@
   [switch] $overrideArgs = $false,
   [switch] $force = $false,
   [alias("pre")][switch] $prerelease = $false,
+  [alias("excludeVersion", "ev")][switch] $script:excludeFolderVersion,
   [switch] $debug
 ) 
 

@@ -21,6 +21,9 @@ $h2
   if ($prerelease -eq $true) {
     $packageArgs = $packageArgs + " -Prerelease";
   }
+  if ($excludeFolderVersion) {
+    $packageArgs = $packageArgs + " -ExcludeVersion"
+  }
   $logFile = Join-Path $nugetChocolateyPath 'install.log'
   $errorLogFile = Join-Path $nugetChocolateyPath 'error.log'
   Write-Debug "Calling NuGet.exe $packageArgs"
